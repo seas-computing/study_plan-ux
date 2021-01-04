@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="https://www.seas.harvard.edu/favicon.ico">
+
+        <title>Study Plan User Experience</title>
+
+        <!-- Style from Mark One at https://seas-computing.github.io/mark-one/ -->
+        <style>
+
+            a, a:link, a:visited {
+                font-size: inherit;
+                color: rgb(22, 115, 177);
+                text-decoration: none;
+            }
+
+            body {
+                display: block;
+            }
+
+            figure > img {
+                width: 100%;
+            }
+
+            figure {
+                border: solid 1px #4a86e8;
+                border-radius: .25em;
+                padding: 1em;
+                margin: 0 0 1em 0;
+            }
+        
+            h1, h2, h3, h4, li {
+                margin: 0px;
+                color: rgb(51, 51, 51);
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                font-weight: normal;
+                line-height: 1.5;
+            }
+        
+            h1 {
+                font-size: 1em;
+            }
+        
+            h2#section-overview {
+                font-size: 2em;
+                border-top: solid 0px white;
+            }
+        
+            h2 {
+                font-size: 2em;
+                border-top: solid 1px lightskyblue;
+            }
+
+            h3 {
+                font-size: 1.6em;
+            }
+
+            h4 {
+                font-size: 1.4em;
+            }
+        
+            p {
+                margin-top: 0px;
+                margin-bottom: 16px;
+                color: rgb(51, 51, 51);
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                font-size: inherit;
+                line-height: 1.5;
+            }
+        
+            .rsg--body-0 {
+                margin: 0;
+                padding: 0;
+                min-width: 0;
+                max-width: 100%;
+                border: 0;
+            }
+        
+            .rsg--content-3 {
+                overflow:hidden;
+                max-width: 935px;
+                padding: 16px 32px 0 32px;
+                margin: 0px auto;
+                display: block;
+            }
+
+            .rsg--hasSidebar-2 {
+                padding-left: 200px;
+            }
+
+            .rsg--item-35 {
+                color: rgb(51, 51, 51);
+                display: block;
+                margin: 8px 0px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                font-size: 15px;
+                list-style: none;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-left: 1em;
+                text-indent: -1em;
+            }
+
+            .rsg--footer-6 {
+                border-top: solid 1px lightskyblue;
+                color: rgb(118, 118, 118);
+                display: block;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                font-size: 13px;
+                padding: 1em 0 0 1em;
+            }
+
+            .rsg--list-34 {
+                margin: 0px;
+                padding-left: 16px;
+                font-size: 15px;
+                line-height: 1.5;
+                padding-left: 1em;
+            }
+
+            .rsg--logo-5 {
+                background-color: white;
+                border-bottom: 1px solid rgb(232, 232, 232);
+                padding: 16px;
+            }
+
+            .rsg--logo-5 > img {
+                width: 10em;
+                padding-bottom: 1em;
+            }
+
+            .rsg--pathline-48, figcaption {
+                font-family: Consolas, "Liberation Mono", Menlo, monospace;
+                font-size: 13px;
+                color: rgb(118, 118, 118);
+                word-break: break-all;
+                margin-top: 1em;
+            }
+        
+            .rsg--root-1 {
+                overflow:hidden;
+                min-height: 100vh;
+                background-color: rgb(255, 255, 255);
+            }
+        
+            .rsg--root-9 {
+                margin-bottom: 32px;
+            }
+
+            .rsg--root-31 {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            }
+        
+            .rsg--sectionName-12 {
+                border-collapse: separate;
+                caption-side: top;
+                caret-color: auto;
+                color: inherit;
+                /* cursor: auto; */
+                empty-cells: show;
+                font-feature-settings: normal;
+                font-kerning: auto;
+                hyphens: none;
+                image-rendering: auto;
+                letter-spacing: normal;
+                list-style-image: none;
+                list-style-position: outside;
+                list-style-type: disc;
+                object-position: 50% 50%;
+                orphans: 2;
+                pointer-events: auto;
+                quotes: initial;
+                ruby-position: over;
+                tab-size: 8;
+                text-align: initial;
+                text-align-last: auto;
+                text-combine-upright: none;
+                text-indent: 0px;
+                text-orientation: mixed;
+                text-rendering: auto;
+                text-shadow: none;
+                text-transform: none;
+                text-underline-position: auto;
+                visibility: visible;
+                white-space: normal;
+                widows: 2;
+                word-break: normal;
+                word-spacing: normal;
+                overflow-wrap: normal;
+                writing-mode: horizontal-tb;
+                appearance: none;
+                backface-visibility: visible;
+                bottom: auto;
+                box-shadow: none;
+                clear: none;
+                clip: auto;
+                column-count: auto;
+                column-fill: balance;
+                column-gap: normal;
+                column-width: auto;
+                content: normal;
+                counter-increment: none;
+                counter-reset: none;
+                float: none;
+                height: auto;
+                left: auto;
+                max-height: none;
+                max-width: none;
+                min-height: 0px;
+                min-width: 0px;
+                opacity: 1;
+                overflow-x: visible;
+                overflow-y: visible;
+                perspective: none;
+                perspective-origin: 50% 50%;
+                position: static;
+                right: auto;
+                table-layout: auto;
+                top: auto;
+                transform: none;
+                transform-origin: 50% 50% 0px;
+                transform-style: flat;
+                unicode-bidi: normal;
+                vertical-align: baseline;
+                width: auto;
+                z-index: auto;
+                box-sizing: border-box;
+                border-spacing: 0px;
+                animation: 0s ease 0s 1 normal none running none;
+                background: none 0px 0px / auto repeat scroll padding-box border-box transparent;
+                border-width: medium;
+                border-style: none;
+                border-color: currentcolor;
+                border-image: none 100% / 1 / 0 stretch;
+                border-radius: 0px;
+                column-rule: medium none currentcolor;
+                margin: 0px;
+                padding: 0px;
+                page-break-after: auto;
+                page-break-before: auto;
+                page-break-inside: auto;
+                text-decoration: none;
+                transition: none 0s ease 0s;
+                font: inherit;
+            }
+
+            .rsg--sidebar-4 {
+                background-color: rgb(245, 245, 245);
+                border-style: solid;
+                border-color: rgb(232, 232, 232);
+                border-image: initial;
+                border-width: 0px 1px 0px 0px;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                width: 200px;
+                overflow: auto;
+                float:left;
+            }
+
+            .rsg--spacing-24 {
+                margin-bottom: 16px;
+            }
+        
+            .rsg--wrapper-10 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 8px;
+            }
+
+            .sub--topic {
+                margin-left: 1em;
+            }
+
+            .sr-only {
+                border: 0; 
+                clip: rect(0 0 0 0); 
+                height: 1px; 
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+
+            a.sr-only:focus, a.sr-only:active {
+                border: 0;
+                clip: rect(0 0 0 0);
+                height: auto;
+                margin: auto;
+                overflow: hidden;
+                padding: 0;
+                position: inherit;
+                width: auto;
+                outline: none;
+                color: rgb(51, 51, 51);
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                font-size: inherit;
+                line-height: 1.5;
+            }
+
+            .sr-only > h4 {
+                border-top: solid 1px lightskyblue;
+            }
+
+            @media (max-width: 600px) {
+                .rsg--sidebar-4 {
+                    position: static;
+                    width: auto;
+                    border-width: 1px 0px 0px;
+                    padding-bottom: 4px;
+                    display: contents;
+                }
+                .rsg--content-3 {
+                    padding: 16px;
+                    display: inline-block;
+                }
+                .rsg--hasSidebar-2 {
+                    padding-left: 0px;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body class="rsg--body-0">
+
+        <div class="rsg--root-1 rsg--hasSidebar-2">
+        
+            <aside class="rsg--sidebar-4" data-testid="sidebar">
+                <header class="rsg--logo-5">
+                    <a href="#section-overview" class="sr-only">
+                        Skip to main content
+                    </a>
+                    <img src="https://www.seas.harvard.edu/sites/default/files/images/H_SEAS_logo_RGB_1.jpg" alt="SEAS logo">
+                    <h1>Plan of Study User&nbsp;Experience <span class="sr-only"> table of contents</span></h1>
+                </header>
+                <nav class="rsg--root-31">
+                    <ul class="rsg--list-34">
+
+                        <li class="rsg--item-35">
+                            <a href="#section-overview">
+                                <span class="sr-only">Skip to section:</span>
+                                Overview
+                            </a>
+                        </li>
+
+                        <li class="rsg--item-35">
+                            <a href="#section-desired_functionality">
+                                <span class="sr-only">Skip to section:</span>
+                                Desired Functionality
+                            </a>
+                        </li>
+
+                        <li class="rsg--item-35">
+                            <a href="#section-process">
+                                <span class="sr-only">Skip to section:</span>
+                                Design and implementation process
+                            </a>
+                        </li>
+
+                        <li class="rsg--item-35">
+                            <a href="#section-current-interface-user_flow">
+                                <span class="sr-only">Skip to section:</span>
+                                Current interface - user flows
+                            </a>
+                            <!-- Sub link -->
+                            <ul class="rsg--list-34">
+
+                                <li class="rsg--item-35">
+                                    <a href="#current-interface-user_flow_approveDeny">
+                                        <span class="sr-only">Skip to section:</span>
+                                        Approve/deny study plan
+                                    </a>
+                                </li>
+                                <li class="rsg--item-35">
+                                    <a href="#current-interface-user_flow_manageStudents">
+                                        <span class="sr-only">Skip to section:</span>
+                                        Manage students
+                                    </a>
+                                </li>
+                                <li class="rsg--item-35">
+                                    <a href="#current-interface-user_flow_myHarvard">
+                                        <span class="sr-only">Skip to section:</span>
+                                        my.harvard
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="rsg--item-35">
+                            <a href="#section-current-interface-screen_capture">
+                                <span class="sr-only">Skip to section:</span>
+                                Current interface - screen captures
+                            </a>
+                            <!-- Sub link -->
+                            <ul class="rsg--list-34">
+
+                                <li class="rsg--item-35">
+                                    <a href="#current-interface-screen_capture-administrator_panel">
+                                        <span class="sr-only">Skip to section:</span>
+                                        Administrator Panel
+                                    </a>
+                                </li>
+                                <li class="rsg--item-35">
+                                    <a href="#current-interface-screen_capture-view_study_plan">
+                                        <span class="sr-only">Skip to section:</span>
+                                        View plan of study
+                                    </a>
+                                </li>
+                                <li class="rsg--item-35">
+                                    <a href="#current-interface-screen_capture-search_student">
+                                        <span class="sr-only">Skip to section:</span>
+                                        Student search and filtering
+                                    </a>
+                                </li>
+                                <li class="rsg--item-35">
+                                    <a href="#current-interface-screen_capture-status_student">
+                                        <span class="sr-only">Skip to section:</span>
+                                        Status of student submitted plans
+                                    </a>
+                                </li>
+
+                                <li class="rsg--item-35">
+                                    <a href="#current-interface-screen_capture-manage_student">
+                                        <span class="sr-only">Skip to section:</span>
+                                        Manage Students
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="rsg--item-35">
+                            <p class="rsg--pathline-48">Updated on Jan. 4, 2021</p>
+                        </li>
+
+                    </ul>
+                </nav>
+            </aside>
+    
+            <main class="rsg--content-3">
+
+                <div role="region" aria-label="Overview">
+                    <h2 id="section-overview">
+                        <a class="rsg--sectionName-12">
+                            Overview
+                        </a>
+                    </h2>
+                    <p>
+                        <a href="https://studyplan-qa.seas.harvard.edu/">Plan of Study</a> 
+                        holds the official record of the courses accepted for each student for their concentration.
+                        <br>
+                        Sara Iams (Staff Co-Director of Applied Mathematics - SEAS Academic Programs) primarily uses the “Submitted Plan of Study Dashboard”.
+                        <br>
+                        Kathy Lovell (Undergraduate Academic Program Manager - SEAS Academic Programs) used to update “Manage Students” by adding all officially graduated students.
+                        <br>
+                        Margo Levine (Interim Director of Undergraduate Education - SEAS Academic Programs) manages other Plan of Study tools.
+                    </p>
+                </div>
+
+                <div role="region" aria-label="Desired functionality">
+                    <h2 id="section-desired_functionality">
+                        <a class="rsg--sectionName-12">
+                            Desired functionality
+                        </a>
+                    </h2>
+                    <p class="sub--topic">Source: “StudyPlan meeting 12/14/2020”, Chris Rogers, Monday, December 14, 2020 at 2:57 PM</p>
+                    <h3 class="sub--topic">Potential areas for improvement:</h3>
+                    <ul class="sub--topic">
+                        <li>Connect the app to my.harvard to: </li>
+                        <ul>
+                            <li>Auto-import student data when they log in </li>
+                            <li>Check course completion </li>
+                            <li>Work out when students have graduated </li>
+                        </ul>
+                        <li>For student search: </li>
+                        <ul>
+                            <li>Make course search and class year search work </li>
+                        </ul>
+                        <li>Improve page load speeds </li>
+                        <li>Allow download of most recent filed plan for a student </li>
+                        <ul>
+                            <li>Allow download of all plans? </li>
+                        </ul>
+                        <li>Automatically move graduated students into appropriate section of the app </li>
+                        <li>Reenable auto checking that a plan is compliant </li>
+                        <li>Reenable course dropdown in plan creation page </li>
+                    </ul>
+                    <h3 class="sub--topic">Aims of the project:</h3>
+                    <ul class="sub--topic">
+                        <li>Ensure the accessibility of the tool </li>
+                        <li>Make it easier for your students to plan their concentrations </li>
+                        <li>Enable you to review the study plans more easily, and manage the concentration </li>
+                        <li>Enable other concentrations to use the tool </li>
+                        <li>Build an application that we can support more easily </li>
+                    </ul>
+                    <h3 class="sub--topic">Additional meeting notes</h3>
+                    <p class="sub--topic">Source: December 14 meeting with Sarah Iams</p>
+                    <ul class="sub--topic">
+                        <li>All currently and active, inactive and graduated students per concentration (from my.harvard)
+                            <ul>
+                                <li>Although in my.harvard it may take a long time to update student status (from active to inactive and
+                                    vice
+                                    versa)</li>
+                                <li>Graduated status is more reliable on my.harvard</li>
+                                <li>My.harvard also indicates which courses a student has completed</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <sup>
+                                <a href="#current-interface-screen_capture-search_student">
+                                    [4]<span class="sr-only">skip to screen capture of Approve Plans interface</span></a></sup>Allow search for</li>
+                        <ul>
+                            <li>All recent filed plan for each student within a class year </li>
+                            <li>All sophomore students graduating in 2024</li>
+                            <li>All plans with “Stat 123” on them</li>
+                        </ul>
+                        <li>Download spreadsheet with Study Plan information (a spreadsheet can already be downloaded from my.harvard)
+                            <ul>
+                                <li>The most recent plan filed for each student</li>
+                                <li>Auditing and coordination with my.harvard</li>
+                                <li>Also all plans with “Denied” and “Filed” status</li>
+                            </ul>
+                        </li>
+                        <li>Sync above spreadsheets to updated Study Plan records</li>
+                        <li>Distinction of students with similar names</li>
+                        <li>When students create a new (additional) plan, it should be populated with data entered in a previous plan, or
+                            from
+                            my.harvard.</li>
+                        <li><sup><a href="#current-interface-screen_capture-view_study_plan">
+                            [1]<span class="sr-only">skip to screen capture of View Study Plan interface</span></a></sup>Groups of listing in course selection could be auto populated</li>
+                        <li><sup><a href="#current-interface-screen_capture-view_study_plan">
+                            [2]<span class="sr-only">skip to screen capture of View Study Plan interface</span></a></sup>Auto-check course selection. Very critical, since any unchecked courses is like a “contract” that
+                            cannot be rectified after graduation or after the course is completed.</li>
+                        <li><sup><a href="#current-interface-screen_capture-manage_student">
+                            [3]<span class="sr-only">skip to screen capture of Manage student interface</span></a></sup>Review study plan of inactive students without changing status.</li>
+                        <li>Wishlist presented 4 years ago before “Alex” left</li>
+                        <li>Hopeful roll-out of the revised Study Plan by next October (the month this tool is used the most)</li>
+                    </ul>
+                </div>
+
+                <div role="region" aria-label="Overview">
+                    <h2 id="section-process">
+                        <a class="rsg--sectionName-12">
+                            Design and implementation process
+                        </a>
+                    </h2>
+                    <ol>
+                        <li>Requirements gathering &lt;---- We are here.</li>
+                        <li>UX discovery</li>
+                        <li>Technical specification
+                            <ol>
+                                <li>Database model</li>
+                                <li>Technical infrastructure</li>
+                                <li>Technology choices</li>
+                            </ol>
+                        </li>
+                        <li>User interface design</li>
+                        <li>Build phase</li>
+                    </ol>
+                </div>
+                
+                <section id="section-current-interface-user_flow">
+
+                    <h2>
+                        <a class="rsg--sectionName-12">
+                            Current interface - user flows
+                        </a>
+                    </h2>
+                    <p>
+                        User flow is the path taken by a prototypical user on a website or app to complete a task. The user flow takes them from
+                        their entry point through a set of steps towards a successful outcome and final action, such as purchasing a product.
+                    </p>
+                    <p class="rsg--pathline-48">
+                        (Source: <a href="https://www.optimizely.com/optimization-glossary/user-flow/#:~:text=User%20flow%20is%20the%20path,such%20as%20purchasing%20a%20product.">Optimizely</a>)
+                    </p>
+                
+                    <div role="region" aria-label="User flow: Approve/deny study plan" class="sub--topic">
+
+                        <h3 id="current-interface-user_flow_approveDeny">
+                            <a class="rsg--sectionName-12">
+                                Approve/deny study plan
+                            </a>
+                        </h3>
+                        <p>
+                            Using the interface "<a href="#current-interface-screen_capture-view_study_plan">View plan of study</a>"
+                            Sara approves or denies plans of study submitted by students.
+                        </p>
+                        <p>
+                            Since the application is very slow, she opens plans of study in separate browser tabs.
+                        </p>
+                        <figure>
+                            <img src="user_flow-approve_deny.png" alt="User flow of approve/deny study plan">
+                            <figcaption>User flow of approving/denying a study plan</figcaption>
+                            <a href="#" class="sr-only">
+                                <h4>Steps of user flow for approving or denying a plan submitted by students</h4>
+                                <ol>
+                                    <li>Approve or deny study plan</li>
+                                    <li>Administrator panel</li>
+                                    <li>Submitted plan of study dashboard</li>
+                                    <li>Search and filter</li>
+                                    <li>Search results (Left color border reflects status of submitted plan)</li>
+                                    <li>Expand individual student and submitted plans (Each plan is labelled as “Pass” or “Fail”)</li>
+                                    <li>Submitted plan (Each plan is opened in a modal)
+                                        <ol>
+                                            <li>Open submitted plan in a new browser tab (This approach allows to review other plans)</li>
+                                            <li>Submitted plan (Feedback for student is added. Plan is approved or denied.)</li>
+                                            <li>Open another submitted plan in a new browser tab</li>
+                                            <li>Submitted plan (Plan is approved or denied.)</li>
+                                        </ol>
+                                    </li>
+                                    <li>Submitted plan (Notes can be added. Plan can be approved or denied.)</li>
+                                </ol>
+                            </a>
+                        </figure>
+
+                    </div>
+                    
+                    <div role="region" aria-label="User flow: Manage students" class="sub--topic">
+
+                        <h3 id="current-interface-user_flow_manageStudents">
+                            <a class="rsg--sectionName-12">
+                                Manage students
+                            </a>
+                        </h3>
+                        <p>
+                            Kathy used to maintain the information in "<a href="#current-interface-screen_capture-manage_student">Manage Students</a>".
+                        </p>
+                        <p>
+                            To review a study plan of an inactive or graduated student, student's status has to be temporarily changed to "active".
+                        </p>
+                        <figure>
+                            <img src="user_flow-manage_student.png" alt="User flow of managing students">
+                            <figcaption>User flow of managing students</figcaption>
+                            <a href="#" class="sr-only">
+                                <h4>Steps of user flow for managing students</h4>
+                                <ol>
+                                    <li>Re-activate students
+                                        <ol type="a">
+                                            <li>Changed concentration</li>
+                                            <li>Indefinite leave</li>
+                                            <li>Review study plan of a graduate student)</li>
+                                        </ol>
+                                    </li>
+                                    <li>Administrator panel</li>
+                                    <li>Manage Students</li>
+                                    <li>Filter selection</li>
+                                    <li>Filter results</li>
+                                    <li>Student selection
+                                        <ol type="a">
+                                            <li>active</li>
+                                            <li>inactive</li>
+                                            <li>graduated</li>
+                                            <li>non-SEAS</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </a>
+                        </figure>
+
+                    </div>
+                    
+                    <div role="region" aria-label="User flow: my.Harvard" class="sub--topic">
+
+                        <h3 id="current-interface-user_flow_myHarvard">
+                            <a class="rsg--sectionName-12">
+                                my.Harvard
+                            </a>
+                        </h3>
+                        <p>Sara uses my.harvard to verify information about students' academic term courses.</p>
+                        <figure>
+                            <img src="user_flow-my_harvard.png" alt="User flow of managing students">
+                            <figcaption>User flow of verifying students' academic term courses</figcaption>
+                            <a href="#" class="sr-only">
+                                <h4>Steps of user flow for verifying students' academic term courses</h4>
+                                <ol>
+                                    <li>Verify student progress (my.harvard is used for some information. Study Plan tool is preferred to my.harvard
+                                        tools)
+                                        because of their limited functionality)</li>
+                                    <li>Submitted plan (Study Plan tool)
+                                        <ul>
+                                            <li>Compare information with my.harvard student academic term courses
+                                        </ul>
+                                    </li>
+                                    <li>my.harvard login (New browser tab)</li>
+                                    <li>my.harvard homepage and search (Search student)</li>
+                                    <li>my.harvard search result(s)</li>
+                                    <li>my.harvard student academic term courses
+                                        <ul>
+                                            <li>Compare information with Submitted plan (Study Plan tool)
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </a>
+                        </figure>
+
+                        <h4 class="sub--topic">
+                            my.harvard desired functionality
+                        </h4>
+
+                        <ul class="sub--topic">
+                            <li>All currently and active, inactive and graduated students per concentration (from my.harvard)
+                              <ul>
+                                <li>Although in my.harvard it may take a long time to update student status (from active to inactive and vice
+                                  versa)</li>
+                                <li>Graduated status is more reliable on my.harvard</li>
+                                <li>My.harvard also indicates which courses a student has completed</li>
+                              </ul>
+                            </li>
+                            <li>Download spreadsheet with Study Plan information (a spreadsheet can already be downloaded from my.harvard)
+                              <ul>
+                                <li>The most recent plan filed for each student</li>
+                                <li>Auditing and coordination with my.harvard</li>
+                                <li>Also all plans with “Denied” and “Filed” status</li>
+                              </ul>
+                            </li>
+                            <li>Sync above spreadsheets to updated Study Plan records<br>
+                            </li>
+                          </ul>
+
+                        <h4 class="sub--topic">
+                            my.harvard pros
+                        </h4>
+                        <ul class="sub--topic">
+                            <li>Graduated status is more reliable on my.harvard</li>
+                            <li>my.harvard also indicates which courses a student has completed</li>
+                        </ul>
+
+                        <h4 class="sub--topic">my.harvard cons</h4>
+                        <ul class="sub--topic">
+                            <li>It may take a long time to update student status (from active to inactive and vice versa)</li>
+                            <li>Text entry fields with little checking</li>
+                            <li>“Cocktail” courses entry, not accepted in a concentration</li>
+                            <li>Useless student management tools (hence Study Plan)<br>
+                            </li>
+                        </ul>
+
+                    </div>
+                </section>
+                
+                <section id="section-current-interface-screen_capture">
+                
+                    <h2>
+                        <a class="rsg--sectionName-12">
+                            Current interface - screen captures
+                        </a>
+                    </h2>
+                    <p>Screen captures of current administrative interface, dated December 2020.</p>
+                    
+                    <div role="region" aria-label="Current interface: Administrator Panel" class="sub--topic">
+
+                        <h3 id="current-interface-screen_capture-administrator_panel">
+                            <a class="rsg--sectionName-12">
+                                Administrator Panel
+                            </a>
+                        </h3>
+                        <p>This interface accesses Plan of Study tools.</p>
+
+                        <figure>
+                            <img src="current_interface_administrator_panel.png" alt="Current interface of Administrator Panel">
+                            <figcaption>Current Administrator Panel interface</figcaption>
+                            <a href="#" class="sr-only">
+                                <h4>Current Administrator Panel interface</h4>
+                                <ol>
+                                    <li>Links to available tools
+                                        <ol>
+                                            <li>Submitted Plan of Study Dashboard (View all the Plans of Study that have been submitted - e.g. require advisor/DUS attention)</li>
+                                            <li>Manage Students (Manage students found in the system — flag students as inactive/graduated, indicate that they have left SEAS, etc.)</li>
+                                            <li>Assign Advisors (Once an advisor has been added to the system, you may assign them advisees - assuming the student has also logged into the system)</li>
+                                            <li>Add New Advisors (Add new advisors to the system by specifying their official Harvard email address - e.g. my.harvard.edu → click on name in upper-right → My Account → whatever email address is listed under "iSites email" on the page that pops up)</li>
+                                            <li>Manage Concentrations (Add new concentrations, edit existing concentrations, and toggle whether or not a concentration is active - e.g. available for current students to select)</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </a>
+                        </figure>
+
+                    </div>
+                    
+                    <div role="region" aria-label="Current interface: Approve/deny study plan" class="sub--topic">
+
+                        <h3 id="current-interface-screen_capture-view_study_plan">
+                            <a class="rsg--sectionName-12">
+                                View plan of study
+                            </a>
+                        </h3>
+                        <p>
+                            This interface is access via the "Submitted Plan of Study Dashboard" link on the Administrative Panel. It allows review, notation, approval or denial of study plans submitted by students.
+                        </p>
+                        <p>
+                            Although useful, the "Auto-check" feature has been inactivated. 
+                            <br>
+                            Desired Functionality - Sections of "Course Selection" should be automatically assigned.
+                        </p>
+
+                        <figure>
+                            <img src="current_interface_view_plan_study.png" alt="Current interface of View Plan of Study">
+                            <figcaption>Current View Plan of Study interface</figcaption>
+                            <a href="#" class="sr-only">
+                                <h4>Current View Plan of Study interface</h4>
+                                <ol>
+                                    <li>Annotated areas
+                                        <ol>
+                                            <li>Current Selection (Groups of listings could be auto populated)</li>
+                                            <li>Auto-check (Auto-check is currently de-activated)</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </a>
+                        </figure>
+
+                    </div>
+                    
+                    <div role="region" aria-label="Current interface: Approve/deny study plan" class="sub--topic">
+
+                        <h3 id="current-interface-screen_capture-search_student">
+                            <a class="rsg--sectionName-12">
+                                Student search and filtering
+                            </a>
+                        </h3>
+                        <p>"Search & Filter" has limited functionality. Not all filters (input forms) work as they should.</p>
+
+                        <figure>
+                            <img src="current_interface_submitted_plan_study_dashboard.png" alt="Current interface of Submitted Plan of Study Dashboard">
+                            <figcaption>Current Submitted Plan of Study Dashboard interface</figcaption>
+                            <a href="#" class="sr-only">
+                                <h4>Current Submitted Plan of Study Dashboard interface</h4>
+                                <ol>
+                                    <li>Annotated area - Search filters (Filters “Students class year” and “Plan status” Other search filters, limited functionality, except for “Student name/email” filter.)</li>
+                                </ol>
+                            </a>
+                        </figure>
+
+                    </div>
+                    
+                    <div role="region" aria-label="Current interface: Status of student submitted plans" class="sub--topic">
+
+                        <h3 id="current-interface-screen_capture-status_student">
+                            <a class="rsg--sectionName-12">
+                                Status of student submitted plans
+                            </a>
+                        </h3>
+                        <p>
+                            Search result list shows filtered students, color coded by status.
+                            <br>
+                            The expanded view of a student (see screen capture below) shows all the submitted plans and their review status from both Auto-check (Fail, Pass) and the reviewer (Denied, Approved).
+                        </p>
+
+                        <figure>
+                            <img src="current_interface_submitted_plan_study_dashboard-student_status_overview.png" alt="Current interface of Submitted Plan of Study Dashboard, Status of student submitted plans">
+                            <figcaption>Current Submitted Plan of Study Dashboard, Status of student submitted plans interface</figcaption>
+                            <a href="#" class="sr-only">
+                                <h4>Current Submitted Plan of Study Dashboard, Status of student submitted plans interface</h4>
+                                <ol>
+                                    <li>Annotated area - color coded overall status and labels of each submitted study plan (filed, denied, or pass).</li>
+                                </ol>
+                            </a>
+                        </figure>
+
+                    </div>
+                    
+                    <div role="region" aria-label="Current interface: Approve/deny study plan" class="sub--topic">
+
+                        <h3 id="current-interface-screen_capture-manage_student">
+                            <a class="rsg--sectionName-12">
+                                Manage Students
+                            </a>
+                        </h3>
+                        <p>
+                            Student status is reviewed and edited in this interface.
+                            <br>
+                            Student status is updated upon change of concentration, indefinite leave, or to review a study plan of student who is no longer active.
+                        </p>
+
+                        <figure>
+                            <img src="current_interface_manage_student.png" alt="Current interface of Manage Students">
+                            <figcaption>Current Manage Students interface</figcaption>
+                            <a href="#" class="sr-only">
+                                <h4>Current Manage Students interface</h4>
+                                <ol>
+                                    <li>Annotated area - Inactive Students (Review study plan of inactive students without changing status.)</li>
+                                </ol>
+                            </a>
+                        </figure>
+
+                    </div>
+
+                </section>
+
+                <div role="region" aria-label="Footer" class="rsg--footer-6">
+                    <p class="rsg--para-25">
+                        Copyright © 2021 The President and Fellows of Harvard College
+                        |
+                        <a href="http://accessibility.harvard.edu/" class="rsg--link-26">Accessibility</a> | <a href="https://accessibility.huit.harvard.edu/digital-accessibility-policy" class="rsg--link-26">Digital Accessibility</a> | <a href="http://www.harvard.edu/reporting-copyright-infringements" class="rsg--link-26">Report Copyright Infringement</a>
+                    </p>
+                </div>
+
+            </main>
+
+        </div>
+    
+    </body>
+
+</html>
